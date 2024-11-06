@@ -49,3 +49,9 @@ def test_fail_tarefa_periodica():
         
     assert type(ex.value) == ZeroDivisionError
 
+
+def tempo():
+    print(datetime.now())
+    with travel('2024-11-06 06:00', tick=False):
+        print(datetime.now())
+    print(datetime.now())
