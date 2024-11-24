@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  loja:
+    image: linuxtips/nginx-prometheus-exporter:1.0.0
+    networks:
+      - traefik-public
+    deploy:
+      labels:
+        - "traefik.enable=true"
+        #Quando o cliente acessar a url do Host, o traefik ira redirecionar para o service da imagem acima
+        - "traefik.http.routers.loja.rule=Host(`loja.biqueiranerd.com.br`)"
+        - "traefik.http.routers.loja.entrypoints=websecure" #habilitando o https
+        - "traefik.http.routers.loja.tls.certresolver=letsencryptresolver"
+        - "traefik.http.services.loja.loadbalancer.server.port=80"
+
+networks:
+  traefik-public:
+    external: true
