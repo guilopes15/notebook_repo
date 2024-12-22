@@ -42,8 +42,9 @@ def discos(url):
 url = 'https://genius.com/artists/Dead-fish/albums'
 
 
-with open('deadfish.csv', 'w') as file:
+with open('raspagem_de_dados/deadfish.csv', 'w') as file:
     writer = DictWriter(file, ['album', 'data', 'musica', 'letra'])
+    writer.writeheader()
     for disco in discos(url):
     
         for faixa in faixas(disco[0]):
