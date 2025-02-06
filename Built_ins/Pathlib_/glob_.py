@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 path_atual = Path()
 files = path_atual / 'Built_ins' / 'Pathlib_' / 'files'
 pasta_0 = files / 'pasta_0'

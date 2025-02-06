@@ -1,5 +1,6 @@
 from pathlib import Path
 
+
 path_atual = Path() / 'Built_ins' / 'Pathlib_'
 pasta_0 = path_atual / 'files' / 'pasta_0'
 pasta_0.mkdir(parents=True, exist_ok=True) # Cria a pasta
