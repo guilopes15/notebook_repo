@@ -1,0 +1,5 @@
+12FATORES = 12factor.net
+DECOUPLE = pypi.org/project/python-decouple
+DYNACONF = www.dynaconf.com
+VAULT = developer.hashicorp.com/vault
+DOTENV = pypi.org/project/python-dotenv
