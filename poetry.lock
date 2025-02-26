@@ -185,6 +185,20 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca"},
+    {file = "python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "respx"
 version = "0.21.1"
 description = "A utility for mocking out the Python HTTPX and HTTP Core libraries."
@@ -291,4 +305,4 @@ python-dateutil = "*"
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.*"
-content-hash = "6fc282190a1fb8bfd340fa1ac07af7f46104f842e4e4726778902205f8fdedf3"
+content-hash = "002d4407aab6becdb788bf26034159e60e15e7b1892352fa5f1ebc3074950479"
