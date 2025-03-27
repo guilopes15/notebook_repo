@@ -31,7 +31,7 @@ max-args = 5   # Argumentos por função
 [tool.radon]
 mi = true  # Habilita Maintainability Index
 cc = true  # Habilita análise de complexidade
-exclude = venv/, tests/
+exclude = ['venv/*', 'tests/*']
 
 
 [tool.safety] # Segurança
