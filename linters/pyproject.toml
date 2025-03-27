@@ -19,10 +19,10 @@ skip-magic-trailing-comma = false  # Mantém vírgulas mágicas
 include = "\\.pyi?$"  # Apenas arquivos .py e .pyi
 exclude = exclude = """
 (
-    \.git/
-  | \.mypy_cache/
-  | \.tox/
-  | \.venv/
+    .git/
+  | .mypy_cache/
+  | .tox/
+  | .venv/
   | _build/
   | buck-out/
   | build/
