@@ -17,17 +17,17 @@ target-version = ["py312"]  # Versão do Python
 skip-string-normalization = false  # Mantém aspas como estão
 skip-magic-trailing-comma = false  # Mantém vírgulas mágicas
 include = "\\.pyi?$"  # Apenas arquivos .py e .pyi
-exclude = """
-/(
-    \.git
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
+exclude = exclude = """
+(
+    \.git/
+  | \.mypy_cache/
+  | \.tox/
+  | \.venv/
+  | _build/
+  | buck-out/
+  | build/
+  | dist/
+)
 """
 extend-exclude = ["legacy_code/"]  # Excluir diretórios adicionais
 
@@ -64,7 +64,7 @@ ignore-names = ["_"]
 
 [tool.ruff.per-file-ignores]
 # Regras ignoradas para arquivos específicos
-["tests/*"] = ["E501", "E701"]
+"tests/*" = ["E501", "E701"]
 
 [build-system]
 requires = ["poetry-core"]
