@@ -13,11 +13,11 @@ ruff = "*"
 
 [tool.black]  # O blue funciona da mesma forma
 line-length = 79
-target-version = ['py312']  # Versão do Python
+target-version = ["py312"]  # Versão do Python
 skip-string-normalization = false  # Mantém aspas como estão
 skip-magic-trailing-comma = false  # Mantém vírgulas mágicas
-include = '\.pyi?$'  # Apenas arquivos .py e .pyi
-exclude = '''
+include = "\\.pyi?$"  # Apenas arquivos .py e .pyi
+exclude = """
 /(
     \.git
   | \.mypy_cache
@@ -28,28 +28,25 @@ exclude = '''
   | build
   | dist
 )/
-'''
-extend-exclude = 'legacy_code/'  # Excluir diretórios adicionais
-
+"""
+extend-exclude = ["legacy_code/"]  # Excluir diretórios adicionais
 
 [tool.ruff]
-target-version = "py312"  
-ignore = ["E501"] # Exclui regras específicas 
+target-version = "py312"
+ignore = ["E501"]  # Exclui regras específicas
 src = ["src", "app"]  # Diretórios a serem incluídos na análise
-line-length = 79  
-exclude = ["build/", "dist/"] # Diretórios e arquivos a serem ignorados
-extend-exclude = ['migrations/', tests/]
-
+line-length = 79
+exclude = ["build/", "dist/"]  # Diretórios e arquivos a serem ignorados
+extend-exclude = ["migrations/", "tests/"]
 
 # Executando o ruff lint: ruff check . && ruff check . --diff
-[tool.ruff.lint] 
+[tool.ruff.lint]
 preview = true
-select = ['I', 'F', 'E', 'W', 'PL', 'PT']
-
+select = ["I", "F", "E", "W", "PL", "PT"]
 
 # Executando o ruff format: ruff check . --fix && ruff format .
-[tool.ruff.format] 
-quote-style = "single"  # Usa aspas duplas em vez de simples
+[tool.ruff.format]
+quote-style = "single"  # Usa aspas simples
 indent-style = "space"  # Usa espaços em vez de tabs
 preview = true
 
@@ -59,7 +56,7 @@ max-complexity = 10
 
 [tool.ruff.pydocstyle]
 # Convenção de docstrings
-convention = "google" # Opções: "google", "numpy", "pep257"
+convention = "google"  # Opções: "google", "numpy", "pep257"
 
 [tool.ruff.pep8-naming]
 # Nomes ignorados pelas regras de nomenclatura
@@ -67,8 +64,7 @@ ignore-names = ["_"]
 
 [tool.ruff.per-file-ignores]
 # Regras ignoradas para arquivos específicos
-"tests/*" = ["E501", "E701"]
-
+["tests/*"] = ["E501", "E701"]
 
 [build-system]
 requires = ["poetry-core"]
