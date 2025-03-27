@@ -71,6 +71,26 @@ repos:
         language: system
         types: [text]
 
+  # Hook para Radon (complexidade ciclomática e maintainability index)
+  - repo: local
+    hooks:
+      - id: radon
+        name: Radon (CC e MI)
+        entry: bash -c "radon cc . --min B && radon mi . --show"
+        language: system
+        types: [python]
+        verbose: true
+
+  # Hook para Pylint (análise de qualidade e modularidade)
+  - repo: local
+    hooks:
+      - id: pylint
+        name: Pylint
+        entry: pylint --errors-only --disable=all --enable=design,imports meu_projeto/ # Substitua meu_projeto/ pelo caminho do seu código
+        language: system
+        types: [python]
+        require_serial: true
+
 default_language_version:
   python: python3.12  # Define a versão padrão do Python
 
