@@ -1,0 +1,77 @@
+repos:
+  - repo: local
+    hooks:
+      - id: trailing-whitespace
+        name: Remove espaços em branco finais
+        entry: trailing-whitespace-fixer
+        language: python
+        types: [text]
+
+      - id: end-of-file-fixer
+        name: Garante que o arquivo termina com uma linha em branco
+        entry: end-of-file-fixer
+        language: python
+        types: [text]
+
+      - id: check-yaml
+        name: Valida a sintaxe YAML
+        entry: check-yaml
+        language: python
+        types: [text]
+
+      - id: check-json
+        name: Valida a sintaxe JSON
+        entry: check-json
+        language: python
+        types: [json]
+
+      - id: check-merge-conflict
+        name: Impede commits com conflitos de merge
+        entry: check-merge-conflict
+        language: python
+        types: [text]
+
+  - repo: local
+    hooks:
+      - id: black
+        name: Formata o código Python automaticamente
+        entry: black --check .
+        language: system
+        types: [python]
+
+      - id: flake8
+        name: Análise de qualidade de código Python
+        entry: flake8 .
+        language: system
+        types: [python]
+
+      - id: ruff
+        name: Análise de código com Ruff
+        entry: ruff check .
+        language: system
+        types: [python]
+
+      - id: mypy
+        name: Checagem de tipos com MyPy
+        entry: mypy .
+        language: system
+        types: [python]
+
+  - repo: local
+    hooks:
+      - id: check-added-large-files
+        name: Impede commits de arquivos grandes (>5MB)
+        entry: check-added-large-files
+        language: python
+        types: [text]
+
+      - id: commitizen
+        name: Valida mensagens de commit
+        entry: cz check --commit-msg-file
+        language: system
+        types: [text]
+
+default_language_version:
+  python: python3.12  # Define a versão padrão do Python
+
+minimum_pre_commit_version: "2.21.0"  # Define a versão mínima do pre-commit
