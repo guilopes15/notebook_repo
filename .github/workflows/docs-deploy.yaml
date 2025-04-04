@@ -27,4 +27,6 @@ jobs:
         run: poetry install --with docs --no-root
 
       - name: Gerar e publicar documentação
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: poetry run mkdocs gh-deploy --force
