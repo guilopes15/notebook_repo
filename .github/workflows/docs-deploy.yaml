@@ -24,4 +24,4 @@ jobs:
         run: poetry install --with docs --no-root
 
       - name: Gerar e publicar documentação
-        run: mkdocs gh-deploy --force
+        run: poetry run mkdocs gh-deploy --force

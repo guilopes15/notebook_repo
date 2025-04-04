@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "notebook-repo"
 version = "0.1.0"
+package-mode = false
 description = ""
 authors = ["guilherme <guilherme-lopes58@hotmail.com>"]
 readme = "README.md"
