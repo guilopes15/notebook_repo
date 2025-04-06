@@ -5,6 +5,7 @@ nav:
       - Instalação: guia/instrucoes.md
       - Configuração: guia/config.md
   - Api: api.md
+  - Exemplos de diagrama: diagrama.md
 
 #theme: readthedocs
 theme:
@@ -19,7 +20,11 @@ markdown_extensions:
   - toc:
       permalink: true
   - admonition
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          #format: !!python/name:pymdownx.superfences.fence_code_format (Quando encontrar uma cerca de código com nome mermaid, use a função fence_code_format para processar o conteúdo antes de renderizar)
   - pymdownx.tabbed
   - pymdownx.highlight
   - pymdownx.details
