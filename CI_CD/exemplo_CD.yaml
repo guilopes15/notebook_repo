@@ -1,0 +1,23 @@
+name: Deploy Automatico
+
+on:
+  workflow_run:
+    workflows: ["Meu CI"]
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  deploy_app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fazer checkout
+        uses: actions/checkout@v2
+
+      - name: Deploy no Heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "exemplo"
+          heroku_email: "meu_email@exemplo.com"
