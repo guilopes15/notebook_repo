@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+      .c1 {
+        background-color: yellow;
+      }
+      .c2 {
+        background-color: cyan;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" id="btn1">Button1</button>
+    <button type="button" id="btn2">Button2</button>
+    <button type="button" id="btn3">Button3</button>
+    <h1 id="test1"></h1>
+    <div id="test2"></div>
+    <input type="text" id="test3" />
+    <br />
+    <br />
+    <button type="button" id="btn4">Button4</button>
+    <a href="http://google.com" title="google" id="link">clique</a>
+    <br />
+    <br />
+    <button type="button" id="btn5">Butto5</button>
+    <button type="button" id="btn6">Butto6</button>
+    <p id="test4">Algum texto</p>
+    <br />
+    <br />
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmLME0hpAJOqBGhaVjcgkk8hIKS3S4GAqrLg&s"
+      alt="Logo"
+    />
+
+    <br />
+    <br />
+    <div id="test5" style="width: 100px; height: 100px">
+      Algum texto ...
+
+      <p class="demo">Test filtro remove</p>
+      <p>Outro texto</p>
+    </div>
+    <br />
+    <button type="button" id="btn7">Button7</button>
+    <button type="button" id="btn8">Button8</button>
+    <button type="button" id="btn9">Button9</button>
+
+    <script>
+      $("#btn1").click(() => {
+        $("#test1").text("hello word");
+      });
+      $("#btn2").click(() => {
+        $("#test2").html("<b>hello word</b>");
+      });
+      $("#btn3").click(() => {
+        $("#test3").val("hello word");
+      });
+
+      $("#btn4").click(() => {
+        $("#link").attr({
+          href: "https://github.com/guilopes15?tab=repositories",
+          title: "github",
+        });
+      });
+
+      $("#btn5").click(() => {
+        $("#test4").append(" mais texto apos");
+      });
+
+      $("#btn6").click(() => {
+        $("#test4").prepend("texto antes ");
+      });
+
+      function appendText() {
+        var txt1 = "<p>Text</p>";
+        var txt2 = $("<p></p>").text("Text");
+        var txt3 = document.createElement("p");
+        txt3.innerHTML = "Text";
+
+        $("body").append(txt1, txt2, txt3);
+      }
+
+      function appendTextAfterBefore() {
+        var txt1 = "<b>I</b>";
+        var txt2 = $("<i></i>").text("love");
+        var txt3 = document.createElement("b");
+        txt3.innerHTML = "JQuery";
+
+        $("img").after(txt1, txt2, txt3);
+        $("img").before(txt1, txt2, txt3);
+      }
+
+      $("#btn7").click(() => {
+        $("#test5").remove();
+      });
+      $("#btn8").click(() => {
+        $("#test5").empty();
+      });
+
+      $("#btn9").click(() => {
+        $("p").remove(".demo");
+      });
+
+      $("#test4").addClass("c1");
+      $("#test4").removeClass("c1");
+      $("#test4").toggleClass("c2");
+    </script>
+  </body>
+</html>

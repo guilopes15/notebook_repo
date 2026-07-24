@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>test</p>
+    <div id="div1" style="width: 500px; height: 500px">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    </div>
+    <button id="test1">Button1</button>
+    <button id="test2">Button2</button>
+    <button id="test3">Button3</button>
+    <button id="test4">Button4</button>
+    <script>
+      $("p").css("background-color", "yellow");
+      $("p").width("200px");
+      alert($(window).width());
+
+      $("#test1").click(() => {
+        var txt = "";
+        txt += "width: " + $("#div1").width() + "<br>";
+        txt += "heigth: " + $("#div1").height();
+        $("#div1").html(txt);
+      });
+
+      $("#test2").click(() => {
+        var txt = "";
+        txt += "inner width: " + $("#div1").innerWidth() + "<br>";
+        txt += "inner heigth: " + $("#div1").innerHeight();
+        $("#div1").html(txt);
+      });
+
+      $("#test3").click(() => {
+        var txt = "";
+        txt += "outer width: " + $("#div1").outerWidth() + "<br>";
+        txt += "outer heigth: " + $("#div1").outerHeight();
+        $("#div1").html(txt);
+      });
+
+      $("#test4").click(() => {
+        var txt = "";
+        txt +=
+          "outer width (margin included): " +
+          $("#div1").outerWidth(true) +
+          "<br>";
+        txt +=
+          "outer heigth (margin included): " + $("#div1").outerHeight(true);
+        $("#div1").html(txt);
+      });
+    </script>
+  </body>
+</html>

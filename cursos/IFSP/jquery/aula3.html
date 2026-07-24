@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn1">Botão animate</button>
+    <button id="btn2">Botão Incrementar</button>
+    <button id="btn3">Botão Toggle</button>
+    <button id="btn4">Botão stop</button>
+    <button id="btn5">Botão hide</button>
+    <button id="btn6">Botão Receber</button>
+    <p id="p1">Sumindo</p>
+    <div
+      id="test1"
+      style="
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      "
+    ></div>
+
+    <br />
+
+    <div id="test2">
+      Test
+      <button id="test-text" type="button">Button</button>
+      <button type="button">Button</button>
+      <a id="link-test" href="https://www.google.com/?hl=pt_BR">Link</a>
+      <input type="text" name="name" id="meu-input" />
+    </div>
+    <script>
+      $("#btn1").click(() => {
+        $("#test1").animate({
+          left: "250px",
+          opacity: "0.5",
+          height: "150px",
+          width: "150px",
+        });
+      });
+
+      // Incrementar e decrementar
+
+      $("#btn2").click(() => {
+        $("#test1").animate({
+          left: "250px",
+          height: "+=150px",
+          width: "+=150px",
+        });
+      });
+
+      // Valores pre definidos
+
+      $("#btn3").click(() => {
+        $("#test1").animate({
+          height: "toggle",
+        });
+      });
+
+      $("#btn4").click(() => {
+        $("#test1").stop(stopAll, jumpToEnd);
+      });
+
+      $("#btn5").click(function () {
+        $("#p1").hide("slow", function () {
+          alert("The paragraph is now hidden");
+        });
+      });
+
+      // Encadeando metodos
+
+      $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+
+      $("#btn6").click(function () {
+        alert("HTML: " + $("#test2").html());
+      });
+
+      $("#btn6").click(function () {
+        alert("HTML: " + $("#test2").text());
+      });
+      $("#btn6").click(function () {
+        alert("HTML: " + $("#link-test").attr("href"));
+      });
+
+      $("#btn6").click(function () {
+        alert("HTML: " + $("#meu-input").val());
+      });
+    </script>
+  </body>
+</html>

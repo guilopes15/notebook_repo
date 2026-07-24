@@ -1,0 +1,118 @@
+linux
+
+aula ssh: https://www.youtube.com/watch?v=LSsPVfr8hRo&t=492s
+configurando centOS: https://www.youtube.com/watch?v=X4jXd5UTgtQ&t=486s
+configurando arch: youtube.com/watch?v=-15zGcRzNvA&time_continue=1&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fclassroom.google.com%2F
+
+jquery:
+
+aula6: https://www.youtube.com/watch?v=sEf2cyeTr8c&t=1s
+aula7: youtube.com/watch?v=3sZx4MrbBRU&time_continue=1&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fclassroom.google.com%2F
+aula8: https://www.youtube.com/watch?v=AsXAlh-c520&time_continue=2&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fclassroom.google.com%2F
+aula9: youtube.com/watch?v=hNyzXq1rYOE&time_continue=0&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fclassroom.google.com%2F
+aula10: youtube.com/watch?v=UVqmYHh_cGw&authuser=0
+
+bootstrap
+
+aula6: https://www.youtube.com/watch?v=-rpaHSuvWW4
+aula7 https://www.youtube.com/watch?v=1Cumle_Cuao
+aula8 https://www.youtube.com/watch?v=uqYR8gnV0Ys
+aula9 https://www.youtube.com/watch?v=2EOvrk-FpHg&authuser=0
+aula10 youtube.com/watch?v=Ra_uBiqyaug&authuser=0
+
+materialize
+
+aula6 youtube.com/watch?v=YnIiv75X90w&authuser=0
+aula7 youtube.com/watch?v=GX-nUGmqJ_g&authuser=0
+aula8 youtube.com/watch?v=SRu94MYfeuM&authuser=0
+aula9 youtube.com/watch?v=St3pyg_LpJg&authuser=0
+aula10 youtube.com/watch?v=X6QWPMJ13Jk&authuser=0
+
+javascript
+
+aula1 youtube.com/watch?v=y22OvfnmdgU&authuser=0
+aula2 https://www.youtube.com/watch?v=LAJat-6H2vQ&authuser=0
+aula3 youtube.com/watch?v=EHfp2QK_b1U&authuser=0
+aula4 https://www.youtube.com/watch?v=saRequQqn4o&authuser=0
+aula5 https://www.youtube.com/watch?v=K2_vHtcyw9w
+aula6 https://www.youtube.com/watch?v=3ed75mocY9w&authuser=0
+aula7 https://www.youtube.com/watch?v=2zddHsJK6OU
+aula8 https://www.youtube.com/watch?v=z9Qj0Hgfm6k
+aula9 youtube.com/watch?v=UR8gjeQjx4U&authuser=0
+aula10 youtube.com/watch?v=TPWAe6ate1Y&authuser=0
+
+java
+
+aula1 youtube.com/watch?v=rM0GAQ25IyQ&authuser=0
+aula2 youtube.com/watch?v=aAUETmwgQSg&authuser=0
+aula3 youtube.com/watch?v=vpedaKgMbFU&authuser=0
+aula4 youtube.com/watch?v=5CIHqbbta5g&authuser=0
+aula5 youtube.com/watch?v=-nGKl17ZbD4&authuser=0
+aula6 https://www.youtube.com/watch?v=jWluokgGkRk
+aula7 youtube.com/watch?v=H7Q8GoKhAdE&authuser=0
+aula8 youtube.com/watch?v=UR01VUeGgIM&authuser=0
+aula9 youtube.com/watch?v=4qxUJd8fe9o&authuser=0
+aula10 https://www.youtube.com/watch?v=ONyBr6jUZeo
+aula11 youtube.com/watch?v=SbJj1siKqPU&authuser=0
+aula12 https://www.youtube.com/watch?v=QL_TuFdEqv8
+aula13 https://www.youtube.com/watch?v=EqIZH0vv_PI
+aula14 https://www.youtube.com/watch?v=cVSRIt91vF8
+
+
+
+
+Database :
+create database Loja;
+
+use Loja;
+
+-- MySQL dump 10.13  Distrib 5.5.54, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: Loja
+-- ------------------------------------------------------
+-- Server version	5.5.54-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Fabricantes`
+--
+
+DROP TABLE IF EXISTS `Fabricantes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Fabricantes` (
+  `codigo` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  PRIMARY KEY (`codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Fabricantes`
+--
+
+LOCK TABLES `Fabricantes` WRITE;
+/*!40000 ALTER TABLE `Fabricantes` DISABLE KEYS */;
+INSERT INTO `Fabricantes` VALUES (1,'LG'),(2,'Samsung');
+/*!40000 ALTER TABLE `Fabricantes` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
